@@ -1,0 +1,156 @@
+
+-- My Script
+
+
+
+--
+
+_G.CheckCustomBuilds = true
+_G.DefaulBuilds = true
+_G.Barrier = true
+_G.bridge2 = true
+_G.bridge4 = true
+_G.ladder = true
+_G.Nazi = true
+_G.penis = true
+_G.platform = true
+_G.stairs = true
+_G.BigPP = true
+
+_G.RGB = true
+_G.RGBswitchDelay = .4
+
+_G.RejoinWaitDelayForReExecute = 1  -- tell how long the script will wait before rejoining (for synapse script queing)
+
+loadstring(game:HttpGet("https://ssbtools.netlify.app/assets/storage/LOADSTRING_SCRIPT2.txt"))()
+
+-- Instances:
+
+local PartCount = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageButton")
+local Button = Instance.new("ImageButton")
+local Baba = Instance.new("TextLabel")
+local TextLabel2 = Instance.new("TextLabel")
+local expand_more1 = Instance.new("ImageButton")
+local Frame2 = Instance.new("ImageButton")
+local expand_more2 = Instance.new("ImageButton")
+
+--Properties:
+
+PartCount.Name = "PartCount"
+PartCount.Parent = game.CoreGui
+PartCount.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Name = "Frame"
+Frame.Parent = PartCount
+Frame.Selectable = true
+Frame.Active = true
+Frame.Draggable = true
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.902971506, 0, 0.916900098, 0)
+Frame.Size = UDim2.new(0, 143, 0, 74)
+Frame.Image = "rbxassetid://2790382281"
+Frame.ImageColor3 = Color3.fromRGB(35, 35, 35)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Button.Name = "Button"
+Button.Parent = Frame
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BackgroundTransparency = 1.000
+Button.Position = UDim2.new(0.118880987, 0, 0.396396458, 0)
+Button.Size = UDim2.new(0, 108, 0, 32)
+Button.Image = "rbxassetid://2790382281"
+Button.ImageColor3 = Color3.fromRGB(45, 45, 45)
+Button.ScaleType = Enum.ScaleType.Slice
+Button.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Baba.Name = "Baba"
+Baba.Parent = Button
+Baba.AnchorPoint = Vector2.new(0.5, 0.5)
+Baba.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Baba.BackgroundTransparency = 1.000
+Baba.BorderSizePixel = 0
+Baba.Position = UDim2.new(0.5, 0, 0.5, 0)
+Baba.Size = UDim2.new(1, -5, 1, -5)
+Baba.Font = Enum.Font.GothamSemibold
+Baba.Text = "Button"
+Baba.TextColor3 = Color3.fromRGB(255, 255, 255)
+Baba.TextSize = 14.000
+
+TextLabel2.Name = "TextLabel2"
+TextLabel2.Parent = Frame
+TextLabel2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.BackgroundTransparency = 1.000
+TextLabel2.BorderSizePixel = 0
+TextLabel2.Position = UDim2.new(0.493006974, 0, 0.210022509, 0)
+TextLabel2.Size = UDim2.new(1, -5, 0.5, -5)
+TextLabel2.ZIndex = 4
+TextLabel2.Font = Enum.Font.GothamSemibold
+TextLabel2.Text = "Part Count"
+TextLabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.TextSize = 14.000
+
+expand_more1.Name = "expand_more1"
+expand_more1.Parent = Frame
+expand_more1.BackgroundTransparency = 1.000
+expand_more1.Position = UDim2.new(0.825174809, 0, 0.0405405313, 0)
+expand_more1.Size = UDim2.new(0, 25, 0, 25)
+expand_more1.ZIndex = 2
+expand_more1.Image = "rbxassetid://3926305904"
+expand_more1.ImageRectOffset = Vector2.new(564, 284)
+expand_more1.ImageRectSize = Vector2.new(36, 36)
+
+Frame2.Name = "Frame2"
+Frame2.Parent = PartCount
+Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame2.BackgroundTransparency = 1.000
+Frame2.Position = UDim2.new(1.10000002, 0, 0.791999996, 0)
+Frame2.Size = UDim2.new(0, 143, 0, 53)
+Frame2.Image = "rbxassetid://2790382281"
+Frame2.ImageColor3 = Color3.fromRGB(35, 35, 35)
+Frame2.ScaleType = Enum.ScaleType.Slice
+Frame2.SliceCenter = Rect.new(4, 4, 252, 252)
+
+expand_more2.Name = "expand_more2"
+expand_more2.Parent = Frame2
+expand_more2.BackgroundTransparency = 1.000
+expand_more2.Position = UDim2.new(0.0699300766, 0, 0.248852611, 0)
+expand_more2.Rotation = 90.000
+expand_more2.Size = UDim2.new(0, 25, 0, 25)
+expand_more2.ZIndex = 2
+expand_more2.Image = "rbxassetid://3926305904"
+expand_more2.ImageRectOffset = Vector2.new(564, 284)
+expand_more2.ImageRectSize = Vector2.new(36, 36)
+
+-- Scripts:
+
+expand_more1.MouseButton1Click:Connect(function()
+	Frame:TweenPosition(UDim2.new(0.903, 0, 1.1, 0), "Out", "Bounce", 1)
+	Frame2:TweenPosition(UDim2.new(0.975, 0, 0.792, 0),"Out", "Bounce", 1)
+end)
+
+expand_more2.MouseButton1Click:Connect(function()
+	Frame2:TweenPosition(UDim2.new(1.1, 0, 0.792, 0),"Out", "Bounce", 1)
+	Frame:TweenPosition(UDim2.new(0.903, 0, 0.917, 0), "Out", "Bounce",	1)
+end)
+
+function ValidParts()
+	local Valid = {}
+	for i,v in pairs(workspace:GetChildren())do
+		if v:IsA("Accessory") then
+			local h = v:FindFirstChild("Handle")
+			if h then
+				table.insert(Valid,v)
+			end
+		end
+	end
+	return Valid
+end
+
+while wait(5) do
+	local a = ValidParts()
+	Baba.Text = (tostring(#a))
+end
