@@ -1,0 +1,577 @@
+local function LYNLCNT_fake_script() -- Clip.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].Settings.FullyClose.ToggleOutline.ToggleInline.Clip)
+	
+	-- Check for Files
+	if isfolder("VisXHubFiles") == false then
+		makefolder("VisXHubFiles")
+		writefile("VisXHubFiles/README.txt", "If you want to DELETE all current settings please DELETE the Parent Folder of this File, 'VisXHubFiles'")
+	end
+	if	isfile("VisXHubFiles/FullyClose.txt") == true then
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Value = 1
+		script.Parent.Position = UDim2.new(0.609, 0, 0.07, 0)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		if isfile("VisXHubFiles/FullyClose.txt") == false then
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Value = 1
+			script.Parent:TweenPosition(
+				UDim2.new(0.609, 0, 0.07, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.5
+			)
+			wait(1)
+			writefile("VisXHubFiles/FullyClose.txt", "1")
+		else
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Value = 0
+			script.Parent:TweenPosition(
+				UDim2.new(-0.014, 0, 0.07, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.5
+			)
+			wait(1)
+			delfile("VisXHubFiles/FullyClose.txt")
+		end
+	end)
+end
+coroutine.wrap(LYNLCNT_fake_script)()
+local function ZEZVUGJ_fake_script() -- Clip_2.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].Settings.Draggable.ToggleOutline.ToggleInline.Clip)
+	
+	-- Check for Files
+	if isfolder("VisXHubFiles") == false then
+		makefolder("VisXHubFiles")
+		writefile("VisXHubFiles/README.txt", "If you want to DELETE all current settings please DELETE the Parent Folder of this File, 'VisXHubFiles'")
+	end
+	
+	if	isfile("VisXHubFiles/IsDraggable.txt") == true then
+		script.Parent.Parent.Parent.Parent.Parent.Parent.MainGui.Draggable = true
+		script.Parent.Parent.Parent.Parent.Parent.Parent.MainGui.Active = true
+		script.Parent.Position = UDim2.new(0.609, 0, 0.07, 0)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if isfile("VisXHubFiles/IsDraggable.txt") == false then
+			script.Parent.Parent.Parent.Parent.Parent.Parent.MainGui.Draggable = true
+			script.Parent.Parent.Parent.Parent.Parent.Parent.MainGui.Active = true
+			script.Parent:TweenPosition(
+				UDim2.new(0.609, 0, 0.07, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.5
+			)
+			wait(1)
+			writefile("VisXHubFiles/IsDraggable.txt", "1")
+		else
+			script.Parent.Parent.Parent.Parent.Parent.Parent.MainGui.Draggable = false
+			script.Parent:TweenPosition(
+				UDim2.new(-0.014, 0, 0.07, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.5
+			)
+			wait(1)
+			delfile("VisXHubFiles/IsDraggable.txt")
+		end
+	end)
+end
+coroutine.wrap(ZEZVUGJ_fake_script)()
+local function FNBKUZ_fake_script() -- Clip_3.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].Settings.ButtonNoise.ToggleOutline.ToggleInline.Clip)
+	
+	-- Check for Files
+	if isfolder("VisXHubFiles") == false then
+		makefolder("VisXHubFiles")
+		writefile("VisXHubFiles/README.txt", "If you want to DELETE all current settings please DELETE the Parent Folder of this File, 'VisXHubFiles'")
+	end
+	if	isfile("VisXHubFiles/ButtonNoise.txt") == true then
+		script.Parent.Parent.Parent.Parent.Parent.Parent.Sound.Volume = 0
+		script.Parent.Position = UDim2.new(0.609, 0, 0.07, 0)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if isfile("VisXHubFiles/ButtonNoise.txt") == false then
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Sound.Volume = 0
+			script.Parent:TweenPosition(
+				UDim2.new(0.609, 0, 0.07, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.5
+			)
+			wait(1)
+			writefile("VisXHubFiles/ButtonNoise.txt", "1")
+		else
+			script.Parent.Parent.Parent.Parent.Parent.Parent.Sound.Volume = 1.5
+			script.Parent:TweenPosition(
+				UDim2.new(-0.014, 0, 0.07, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.5
+			)
+			wait(1)
+			delfile("VisXHubFiles/ButtonNoise.txt")
+		end
+	end)
+end
+coroutine.wrap(FNBKUZ_fake_script)()
+local function GDGLXH_fake_script() -- CloseGuiButton.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].Settings.CloseGuiButton)
+	
+	local guifolder = game.CoreGui:WaitForChild("VisXFolder")
+	local Header = guifolder['Vix-XHub'].MainGui.TextBar.TextBarText
+	script.Parent.MouseButton1Click:Connect(function()
+		Header.Text = "GoodBye!"
+		wait(3)
+		Header.Text = ""
+		guifolder:Destroy()
+	end)
+	
+end
+coroutine.wrap(GDGLXH_fake_script)()
+
+
+-- Scripts:
+
+local function OZJSYIE_fake_script() -- VixXHub.LeftArrow.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.PageChange.LeftArrow)
+	
+	local HubsP1 = script.Parent.Parent.Parent:WaitForChild("Hubs")
+	local HubsP2 = script.Parent.Parent.Parent:WaitForChild("HubsPage2")
+	local ScriptsP1 = script.Parent.Parent.Parent:WaitForChild("Scripts")
+	local ScriptsP2 = script.Parent.Parent.Parent:WaitForChild("ScriptsPage2")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if ScriptsP1.Visible == true then
+			ScriptsP2.Visible = false
+		else
+			if HubsP1.Visible == true then
+				HubsP2.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(OZJSYIE_fake_script)()
+local function ONIWOF_fake_script() -- VixXHub.LeftArrow.buttonanim 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.PageChange.LeftArrow)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(ONIWOF_fake_script)()
+local function MUQARV_fake_script() -- VixXHub.RightArrow.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.PageChange.RightArrow)
+	
+	local HubsP1 = script.Parent.Parent.Parent:WaitForChild("Hubs")
+	local HubsP2 = script.Parent.Parent.Parent:WaitForChild("HubsPage2")
+	local ScriptsP1 = script.Parent.Parent.Parent:WaitForChild("Scripts")
+	local ScriptsP2 = script.Parent.Parent.Parent:WaitForChild("ScriptsPage2")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if ScriptsP1.Visible == true then
+			ScriptsP2.Visible = true
+		else
+			if HubsP1.Visible == true then
+				HubsP2.Visible = true
+			end
+		end
+	end)
+end
+coroutine.wrap(MUQARV_fake_script)()
+local function LDXTVHB_fake_script() -- VixXHub.RightArrow.buttonanim 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.PageChange.RightArrow)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(LDXTVHB_fake_script)()
+local function GNPQN_fake_script() -- VixXHub.HubsIcon.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.HubsIcon)
+	
+	local HubsP1 = script.Parent.Parent.Parent:WaitForChild("Hubs")
+	local HubsP2 = script.Parent.Parent.Parent:WaitForChild("HubsPage2")
+	local ScriptsP1 = script.Parent.Parent.Parent:WaitForChild("Scripts")
+	local ScriptsP2 = script.Parent.Parent.Parent:WaitForChild("ScriptsPage2")
+	local Header = script.Parent.Parent.Parent.TextBar
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		HubsP1.Visible = true
+		ScriptsP1.Visible = false
+		ScriptsP2.Visible = false
+		Header.TextBarText.Text = "Hubs Section"
+		wait(3)
+		Header.TextBarText.Text = ""
+	end)
+end
+coroutine.wrap(GNPQN_fake_script)()
+local function XGSK_fake_script() -- VixXHub.HubsIcon.buttonanim 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.HubsIcon)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(XGSK_fake_script)()
+local function CDEMCB_fake_script() -- VixXHub.ScriptsIcon.Script 
+	local script = Instance.new('Script',game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.ScriptsIcon)
+	
+	local HubsP1 = script.Parent.Parent.Parent:WaitForChild("Hubs")
+	local HubsP2 = script.Parent.Parent.Parent:WaitForChild("HubsPage2")
+	local ScriptsP1 = script.Parent.Parent.Parent:WaitForChild("Scripts")
+	local ScriptsP2 = script.Parent.Parent.Parent:WaitForChild("ScriptsPage2")
+	local Header = script.Parent.Parent.Parent.TextBar
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		HubsP2.Visible = false
+		HubsP1.Visible = false
+		ScriptsP1.Visible = true
+		Header.TextBarText.Text = "Scripts Section"
+		wait(3)
+		Header.TextBarText.Text = ""
+	end)
+end
+coroutine.wrap(CDEMCB_fake_script)()
+local function DGFEN_fake_script() -- VixXHub.ScriptsIcon.buttonanim 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.ScriptsIcon)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(DGFEN_fake_script)()
+local function NTXVZ_fake_script() -- VixXHub.AnnouncmentsIcon.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.AnnouncmentsIcon)
+	
+	local announce = script.Parent.Parent.Parent.Parent:WaitForChild("Announcments")
+	announce.Visible = false
+	announce.Active = false
+	announce.Position = UDim2.new(0.92, -333, 0.976, -380)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if announce.Active == false then
+			announce.Active = true
+			announce.Visible = true
+			announce:TweenPosition(
+				UDim2.new(0.687, -333, 0.976, -380),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				1
+			)
+		else
+			if announce.Active == true then
+				announce:TweenPosition(
+					UDim2.new(0.92, -333, 0.976, -380),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quad,
+					1
+				)
+				wait(1)
+				announce.Active = false
+				announce.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(NTXVZ_fake_script)()
+local function OILB_fake_script() -- VixXHub.AnnouncmentsIcon.buttonanim 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.AnnouncmentsIcon)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(OILB_fake_script)()
+local function VECEM_fake_script() -- VixXHub.CloseArrow2.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.SectionsClose.CloseArrow2)
+	
+	local thing = 1
+	script.Parent.MouseButton1Click:Connect(function()
+		if thing == 1 then
+			thing = 0
+			script.Parent.Parent.Parent:TweenPosition(
+				UDim2.new(0.016, 0, 0.94, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				1
+			)
+			for count = 1, 18, 1 do
+				script.Parent.Rotation = script.Parent.Rotation + 10
+			end
+		else
+			if thing == 0 then
+				thing = 1
+				script.Parent.Parent.Parent:TweenPosition(
+					UDim2.new(0.016, 0, 0.662, 0),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quad,
+					1
+				)
+				for count = 1, 18, 1 do
+					script.Parent.Rotation = script.Parent.Rotation - 10
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(VECEM_fake_script)()
+local function AMQS_fake_script() -- VixXHub.CloseArrow2.buttonanim 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.SectionsClose.CloseArrow2)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(AMQS_fake_script)()
+local function CZTCYC_fake_script() -- VixXHub.tune.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.tune)
+	
+	thingy = 0
+	local settingtab = script.Parent.Parent.Parent.Parent:WaitForChild("Settings")
+	settingtab.Position = UDim2.new(0.5, -157, 1.3, -190)
+	settingtab.Visible = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if thingy == 0 then
+			thingy = 1
+			settingtab.Visible = true
+			settingtab:TweenPosition(
+				UDim2.new(0.5, -157, 0.5, -190),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				1
+			)
+		else
+			thingy = 0
+			settingtab:TweenPosition(
+				UDim2.new(0.5, -157, 1.3, -190),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				1
+			)
+			settingtab.Visible = false
+		end
+	end)
+end
+coroutine.wrap(CZTCYC_fake_script)()
+local function RHXHEZ_fake_script() -- VixXHub.tune.buttonanim 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Sections.tune)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(RHXHEZ_fake_script)()
+local function MHNUH_fake_script() -- VixXHub.CloseArrow.Script 
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Close.CloseArrow)
+	
+	local thing = 0
+	local thing2 = game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].Value
+	script.Parent.MouseButton1Click:Connect(function()
+		if  thing == 1 then
+			if thing2 == 0 then
+				thing = 0
+				script.Parent.Parent.Parent:TweenPosition(
+					UDim2.new(1, -612, 1.285, -437),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quad,
+					1
+					
+				)
+				for count = 1, 18, 1 do
+					script.Parent.Rotation = script.Parent.Rotation + 10
+				end
+			else
+				thing = 0
+				script.Parent.Parent.Parent:TweenPosition(
+					UDim2.new(1, -612, 1.32, -437),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quad,
+					1
+				)
+				for count = 1, 18, 1 do
+					script.Parent.Rotation = script.Parent.Rotation + 10
+				end
+				script.Parent.Parent.Parent.Parent.OpenButtton.Position = UDim2.new(-0.06, 0, 0.87, 0)
+				script.Parent.Parent.Parent.Parent.OpenButtton.Visible = true
+				script.Parent.Parent.Parent.Parent.OpenButtton:TweenPosition(
+					UDim2.new(-0.032, 0, 0.87, 0),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quad,
+					1
+				)
+				wait(1)
+				script.Parent.Parent.Parent.Visible = false
+			end
+		else
+			thing = 1
+			script.Parent.Parent.Parent:TweenPosition(
+				UDim2.new(1, -612, 1, -437),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				1
+			)
+			for count = 1, 18, 1 do
+				script.Parent.Rotation = script.Parent.Rotation - 10
+			end
+			script.Parent.Parent.Parent.Visible = true
+		end
+	end)
+end
+coroutine.wrap(MHNUH_fake_script)()
+local function CGWY_fake_script() -- VixXHub.CloseArrow.buttonanim  CLOSEGUI BUTTON ANIMATION
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].MainGui.Close.CloseArrow)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(CGWY_fake_script)()
+local function XAHRL_fake_script() -- VixXHub.Button_20.Script 
+	local script = Instance.new('Script', VixXHub.Button_20)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(XAHRL_fake_script)()
+local function BKHRA_fake_script() -- VixXHub.VixXHub.Script STARTING SCRIPT
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"])
+	
+	
+	local maingui = script.Parent.MainGui
+	local loadingBar = script.Parent.Loading
+	local openscreen = script.Parent.opening
+	
+	
+	maingui.Visible = false
+	loadingBar.Visible = true
+	loadingBar.Active = true
+	openscreen.Visible = true
+	openscreen.Active = true
+	openscreen.Position = UDim2.new(0.499, -219, 1.5, -219)
+	loadingBar.Position = UDim2.new(0.434, 0, -0.25, 0)
+	loadingBar.Frame.Bar.ClipBar.Gradient.Position = UDim2.new(-1.026, 0, -0.006, 0)
+	
+	openscreen:TweenPosition(
+		UDim2.new(0.499, -219,0.499, -219),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Quad,
+		1
+	)
+	
+	script.Parent.opening.Button.MouseButton1Click:Connect(function()
+		openscreen:TweenPosition(
+			UDim2.new(0.499, -219, 1.5, -219),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quad,
+			1
+		)
+		wait(1)
+		openscreen.Visible = false
+		loadingBar:TweenPosition(
+			UDim2.new(0.434, 0, 0.395, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quad,
+			1
+		)
+		wait(1.5)
+		loadingBar.Frame.Bar.ClipBar.Gradient:TweenPosition(
+			UDim2.new(0.001, 0, -0.006, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Linear,
+			3
+		)
+		wait(3)
+		loadingBar:TweenPosition(
+			UDim2.new(0.434, 0, -0.25, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quad,
+			1
+		)
+		wait(1)
+		openscreen:Destroy()
+		loadingBar:Destroy()
+		maingui.Position = UDim2.new(0.682, 0, 1, 0)
+		maingui.Visible = true
+		maingui:TweenPosition(
+			UDim2.new(1, -612, 1, -437),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quad,
+			1
+		)
+	end)
+end
+coroutine.wrap(BKHRA_fake_script)()
+local function ZIDKF_fake_script() -- VixXHub.CloseArrow_2.Script  FULLY CLOSE GUI BUTTON
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].OpenButtton.CloseArrow)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.MainGui:TweenPosition(
+			UDim2.new(1, -612, 1, -437),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quad,
+			1
+		)
+		for count = 1, 18, 1 do
+			script.Parent.Parent.Parent.MainGui.Close.CloseArrow.Rotation = script.Parent.Rotation - 10
+		end
+		script.Parent.Parent:TweenPosition(
+			UDim2.new(-0.06, 0, 0.87, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quad,
+			1
+		)
+		wait(1)
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.MainGui.Visible = true
+	end)
+end
+coroutine.wrap(ZIDKF_fake_script)()
+local function JJPDAL_fake_script() -- VixXHub.CloseArrow_2.buttonanim 	FULLY CLOSE GUI BUTTON ANIMATION
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].OpenButtton.CloseArrow)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ImageTransparency = .5
+		game.CoreGui.VisXFolder:WaitForChild("Sound"):Play()
+		wait(.25)
+		script.Parent.ImageTransparency = 0
+	end)
+	
+end
+coroutine.wrap(JJPDAL_fake_script)()
