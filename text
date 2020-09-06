@@ -1,8 +1,6 @@
-
-print(script.Parent.Name)
-
+print("StartingScriptLoading")
 local function LYNLCNT_fake_script() -- Clip.Script 
-	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].Settings.FullyClose.ToggleOutline.ToggleInline.Clip)
+	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder"):WaitForChild("Vix-XHub"):WaitForChild("Settings"):WaitForChild("FullyClose"):WaitForChild("ToggleOutline"):WaitForChild("ToggleInline:WaitForChild("Clip")
 	
 	-- Check for Files
 	if isfolder("VisXHubFiles") == false then
