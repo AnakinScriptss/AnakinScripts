@@ -1,3 +1,6 @@
+
+print(script.Parent.Name)
+
 local function LYNLCNT_fake_script() -- Clip.Script 
 	local script = Instance.new('Script', game.CoreGui:WaitForChild("VisXFolder")["Vix-XHub"].Settings.FullyClose.ToggleOutline.ToggleInline.Clip)
 	
@@ -575,4 +578,3 @@ local function JJPDAL_fake_script() -- VixXHub.CloseArrow_2.buttonanim 	FULLY CL
 	
 end
 coroutine.wrap(JJPDAL_fake_script)()
-print(script.Parent.Name)
